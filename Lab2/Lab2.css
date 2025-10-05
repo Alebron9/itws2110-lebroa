@@ -1,0 +1,81 @@
+body {
+    font-family: 'Georgia', serif;
+    background: linear-gradient(to bottom, rgba(213,206,166,1) 0%,rgba(201,193,144,1) 40%,rgba(183,173,112,1) 100%);
+}
+
+.constitution-body {
+    max-width: 800px;
+    background: #fff;
+    margin: 1.0rem auto 2rem auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.7);
+    padding: 0.5rem 2rem 1.5rem 2rem;
+}
+
+.article-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1.25rem;
+    padding-bottom: 5px;
+    border-bottom: 2px solid;
+}
+
+.section-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    border-left: 4px solid;
+    padding-left: 0.75rem;
+    margin-left: 3px;
+}
+
+p {
+    line-height: 1.75;
+    margin: 0.75rem 0 0.75rem 0;
+    padding-left: 25px;
+}
+
+
+.section-title {
+    font-family: "Italianno", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 50px;
+    margin-top: 5px;
+    padding-bottom: 0px;
+}
+
+.article-title {
+    font-family: "Italianno", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 70px;
+    margin-top: 10px;
+    padding-bottom: 0px;
+}
+
+.constitution-body{
+    font-family: "Georgia";
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.anno{
+    color: rgb(194, 10, 10);
+}
+
+.constitution-body p{
+    margin: 3px;
+    line-height: 22px;
+}
+
+.hidden-content {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.4s ease;
+}
