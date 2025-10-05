@@ -1,0 +1,105 @@
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: linear-gradient(180deg, #f9d29d, #f6f0c4);
+    background-size: 600% 600%;
+    animation: skyCycle 60s ease-in-out infinite;
+}
+
+@keyframes skyCycle {
+    0% {
+        background: linear-gradient(180deg, #f9d29d 0%, #f6f0c4 100%); /* Morning */
+    }
+    25% {
+        background: linear-gradient(180deg, #89f7fe 0%, #66a6ff 100%); /* Noon */
+    }
+    50% {
+        background: linear-gradient(180deg, #f6d365 0%, #fda085 100%); /* Sunset */
+    }
+    75% {
+        background: linear-gradient(180deg, #3a1c71 0%, #d76d77 50%, #ffaf7b 100%); /* Dusk */
+    }
+    100% {
+        background: linear-gradient(180deg, #2c3e50 0%, #4ca1af 100%); /* Night */
+    }
+}
+
+header {
+    background: #0077b6;
+    color: white;
+    padding: 15px 0;
+}
+
+#map {
+    height: 400px;
+    width: 90%;
+    margin: 20px auto;
+    border-radius: 8px;
+}
+
+#info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+#weather {
+    background: linear-gradient(145deg, #0093E9 0%, #80D0C7 100%);
+    color: white;
+    padding: 20px;
+    border-radius: 15px;
+    width: 320px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#weather:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
+}
+
+#weather img {
+    width: 80px;
+    height: 80px;
+    margin: 10px 0;
+    filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.2));
+}
+
+#weather h2 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+#weather p {
+    margin: 6px 0;
+    font-size: 1rem;
+}
+
+#weather p:first-of-type {
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+#daylight {
+    background: linear-gradient(145deg, #f9d423 0%, #ff4e50 100%);
+    color: white;
+    padding: 20px;
+    border-radius: 15px;
+    width: 320px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+footer {
+    background: #0077b6;
+    color: white;
+    padding: 10px;
+    font-size: 14px;
+}
