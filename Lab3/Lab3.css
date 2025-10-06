@@ -46,7 +46,7 @@ header {
     margin-bottom: 30px;
 }
 
-/* Weather card styling — gives a modern gradient look */
+/* Weather card styling */
 #weather {
     background: linear-gradient(145deg, #0093E9 0%, #80D0C7 100%);
     color: white;
