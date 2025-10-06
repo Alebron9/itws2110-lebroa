@@ -4,20 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather/Daylight - Troy, NY</title>
+
+    <!-- Link to custom CSS and Leaflet styles -->
     <link rel="stylesheet" href="Lab3.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 </head>
 <body>
     <header>
-    <h1>Weather & Daylight App 🌤️</h1>
-    <p>Showing live weather and daylight info for Troy, NY</p>
+        <h1>Weather & Daylight App 🌤️</h1>
+        <p>Showing live weather and daylight info for Troy, NY</p>
     </header>
 
     <main>
+        <!-- Interactive Map Section -->
         <div id="map"></div>
+
+        <!-- Info Section (Weather + Daylight Cards) -->
         <div id="info">
-            <div id="weather"></div>
-            <div id="daylight"></div>
+            <div id="weather"></div>  <!-- Weather card dynamically filled from OpenWeather API -->
+            <div id="daylight"></div> <!-- Daylight card dynamically filled from Sunrise-Sunset API -->
         </div>
     </main>
 
@@ -25,6 +30,7 @@
         <p>Data from OpenWeatherMap & Sunrise-Sunset APIs</p>
     </footer>
 
+    <!-- Leaflet Map Script and Custom JS -->
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script src="Lab3.js"></script>
 </body>

@@ -5,26 +5,23 @@ body {
     margin: 0;
     padding: 0;
     height: 100vh;
-    background: linear-gradient(180deg, #f9d29d, #f6f0c4);
-    background-size: 600% 600%;
+
+    /* Animated background simulating the sky changing throughout the day */
+    background: linear-gradient(270deg, #f9d29d, #89f7fe, #f6d365, #3a1c71, #2c3e50);
+    background-size: 1000% 1000%;
     animation: skyCycle 60s ease-in-out infinite;
 }
 
+/* Smoothly cycles the sky colors instead of instantly changing */
 @keyframes skyCycle {
     0% {
-        background: linear-gradient(180deg, #f9d29d 0%, #f6f0c4 100%); /* Morning */
-    }
-    25% {
-        background: linear-gradient(180deg, #89f7fe 0%, #66a6ff 100%); /* Noon */
+        background-position: 0% 50%;
     }
     50% {
-        background: linear-gradient(180deg, #f6d365 0%, #fda085 100%); /* Sunset */
-    }
-    75% {
-        background: linear-gradient(180deg, #3a1c71 0%, #d76d77 50%, #ffaf7b 100%); /* Dusk */
+        background-position: 100% 50%;
     }
     100% {
-        background: linear-gradient(180deg, #2c3e50 0%, #4ca1af 100%); /* Night */
+        background-position: 0% 50%;
     }
 }
 
@@ -49,6 +46,7 @@ header {
     margin-bottom: 30px;
 }
 
+/* Weather card styling — gives a modern gradient look */
 #weather {
     background: linear-gradient(145deg, #0093E9 0%, #80D0C7 100%);
     color: white;
@@ -60,31 +58,10 @@ header {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Slight hover effect for visual feedback */
 #weather:hover {
     transform: translateY(-5px);
     box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
-}
-
-#weather img {
-    width: 80px;
-    height: 80px;
-    margin: 10px 0;
-    filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.2));
-}
-
-#weather h2 {
-    font-size: 1.5rem;
-    margin-bottom: 5px;
-}
-
-#weather p {
-    margin: 6px 0;
-    font-size: 1rem;
-}
-
-#weather p:first-of-type {
-    font-weight: bold;
-    text-transform: capitalize;
 }
 
 #daylight {
