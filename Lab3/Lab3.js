@@ -1,5 +1,3 @@
-const OPENWEATHER_API_KEY = "9149f1272cc3234e8d8db7652eabbb68";
-
 // Default fallback: Troy, NY (used if user denies location access)
 const DEFAULT_COORDS = {lat: 42.7284, lon: -73.6918};
 

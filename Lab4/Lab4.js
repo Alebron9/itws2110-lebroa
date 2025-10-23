@@ -1,11 +1,3 @@
-// script.js
-
-// OpenWeatherMap API key provided by user
-const WEATHER_API_KEY = '9149f1272cc3234e8d8db7652eabbb68';
-const WEATHER_URL = `https://api.openweathermap.org/data/2.5/weather?q=Troy,US&appid=${WEATHER_API_KEY}&units=metric`;
-
-const NASA_API_URL = 'https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY'; // Demo key works for testing
-
 $(document).ready(function() {
   // Fetch weather data
   $.ajax({
