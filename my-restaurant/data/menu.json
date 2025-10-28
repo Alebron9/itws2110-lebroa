@@ -1,0 +1,63 @@
+{
+  "dishes": [
+    {
+      "id": 1,
+      "name": "Mofongo Relleno de Camarones",
+      "description": "Crispy fried green plantains mashed with garlic and olive oil, formed into a savory mound and stuffed with seasoned shrimp in a flavorful sauce",
+      "category": "non-vegetarian",
+      "cuisine": "Puerto Rican",
+      "image": "resources/Mofongo.jpg",
+      "ingredients": [
+        "Green plantains",
+        "Garlic",
+        "Olive oil",
+        "Shrimp"
+      ],
+      "price": 24.99
+    },
+    {
+      "id": 2,
+      "name": "Arepas con Queso",
+      "description": "Golden griddled cornmeal cakes with a crispy exterior and soft, fluffy interior, filled with melted cheese and brushed with butter",
+      "category": "vegetarian",
+      "cuisine": "Puerto Rican",
+      "image": "resources/ArepasConQueso.jpg",
+      "ingredients": [
+        "Cornmeal",
+        "Cheese",
+        "Butter",
+        "Salt"
+      ],
+      "price": 9.99
+    },
+    {
+      "id": 3,
+      "name": "Tostones",
+      "description": "Twice-fried green plantain slices seasoned with garlic and olive oil, creating crispy, golden discs with a tender center",
+      "category": "vegan",
+      "cuisine": "Puerto Rican",
+      "image": "resources/Tostones.jpg",
+      "ingredients": [
+        "Green plantains",
+        "Garlic",
+        "Olive oil"
+      ],
+      "price": 4.99
+    },
+    {
+      "id": 4,
+      "name": "Tembleque",
+      "description": "A very smooth coconut pudding made with coconut milk and cornstarch, lightly sweetened and topped with cinnamon",
+      "category": "vegetarian",
+      "cuisine": "Puerto Rican",
+      "image": "resources/Tembleque.jpg",
+      "ingredients": [
+        "Coconut milk",
+        "Cornstarch",
+        "Sugar",
+        "Salt"
+      ],
+      "price": 14.99
+    }
+  ]
+}

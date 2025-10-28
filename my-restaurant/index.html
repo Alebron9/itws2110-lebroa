@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>El Restaurante Boricua - Puerto Rican Restaurant</title>
+  <link rel="stylesheet" href="resources/menu.css">
+</head>
+<body>
+  <header>
+    <h1>El Restaurante Boricua</h1>
+    <p>Authentic Puerto Rican Cuisine</p>
+  </header>
+
+  <main>
+    <section id="menu-intro">
+      <h2>Our Menu</h2>
+      <p>Discover the flavors of Puerto Rico with our handcrafted dishes</p>
+    </section>
+
+    <section id="filter-section">
+      <label for="category-filter">Filter by Category:</label>
+      <select id="category-filter">
+        <option value="all">All Dishes</option>
+        <option value="non-vegetarian">Non-Vegetarian</option>
+        <option value="vegetarian">Vegetarian</option>
+        <option value="vegan">Vegan</option>
+      </select>
+    </section>
+
+    <section id="menu-container">
+      <div id="loading">Loading menu...</div>
+      <table id="menu-table">
+        <thead>
+          <tr>
+            <th>Image</th>
+            <th>Dish</th>
+            <th>Description</th>
+            <th>Category</th>
+            <th>Ingredients</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody id="menu-body">
+          <!-- Menu items will be dynamically inserted here -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 El Restaurante Boricua | Bringing Puerto Rico to your table</p>
+  </footer>
+
+  <script src="resources/menu.js"></script>
+</body>
+</html>

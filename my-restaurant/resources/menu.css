@@ -1,0 +1,237 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Georgia', serif;
+  background: #8b4513;
+  color: #333;
+  min-height: 100vh;
+  padding-bottom: 60px;
+}
+
+header {
+  background: #d2b48c;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+header p {
+  font-size: 1.3em;
+  font-style: italic;
+}
+
+main {
+  max-width: 1400px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+#menu-intro {
+  text-align: center;
+  margin-bottom: 30px;
+  color: white;
+}
+
+#menu-intro h2 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+#menu-intro p {
+  font-size: 1.2em;
+}
+
+#filter-section {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#filter-section label {
+  color: white;
+  font-size: 1.2em;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+#category-filter {
+  padding: 10px 20px;
+  font-size: 1em;
+  border: none;
+  border-radius: 25px;
+  background: white;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#category-filter:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+#menu-container {
+  background: white;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+#loading {
+  text-align: center;
+  font-size: 1.5em;
+  color: #667eea;
+  padding: 40px;
+}
+
+#menu-table {
+  width: 100%;
+  border-collapse: collapse;
+  display: none;
+}
+
+#menu-table thead {
+  background: #d2b48c;
+  color: white;
+}
+
+#menu-table th {
+  padding: 15px;
+  text-align: left;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+#menu-table tbody tr {
+  border-bottom: 1px solid #e0e0e0;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#menu-table tbody tr:hover {
+  background-color: #f5f5f5;
+  transform: scale(1.01);
+}
+
+#menu-table tbody tr.hidden {
+  display: none;
+}
+
+#menu-table td {
+  padding: 20px 15px;
+  vertical-align: middle;
+}
+
+.dish-image {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.dish-name {
+  font-weight: bold;
+  font-size: 1.2em;
+  color: #764ba2;
+  margin-bottom: 5px;
+}
+
+.dish-cuisine {
+  font-size: 0.9em;
+  color: #666;
+  font-style: italic;
+}
+
+.dish-description {
+  line-height: 1.6;
+  color: #555;
+}
+
+.category-badge {
+  display: inline-block;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 0.9em;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.category-non-vegetarian {
+  background: #dc143c;
+  color: white;
+}
+
+.category-vegetarian {
+  background: #006400;
+  color: white;
+}
+
+.category-vegan {
+  background: #90ee90;
+  color: #333;
+}
+
+.ingredients-list {
+  list-style: none;
+  padding: 0;
+}
+
+.ingredients-list li {
+  padding: 4px 0;
+  color: #555;
+}
+
+.ingredients-list li:before {
+  content: "• ";
+  color: #764ba2;
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.dish-price {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #000000;
+}
+
+footer {
+  background: #8b4513;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  #menu-table {
+    font-size: 0.9em;
+  }
+  
+  .dish-image {
+    width: 80px;
+    height: 80px;
+  }
+  
+  header h1 {
+    font-size: 2em;
+  }
+  
+  #menu-table th,
+  #menu-table td {
+    padding: 10px 8px;
+  }
+}
