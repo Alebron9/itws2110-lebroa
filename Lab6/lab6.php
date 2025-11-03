@@ -51,7 +51,7 @@ class Multiplication extends Operation {
 class Division extends Operation {
   public function operate() {
     if ($this->operand_2 == 0) {
-      throw new Exception('Division by zero.');
+      throw new Exception('Undefined Operation');
     }
     return $this->operand_1 / $this->operand_2;
   }
@@ -138,7 +138,7 @@ class Division extends Operation {
     } 
   ?>
   </pre>
-  <form method="post" action="lab6start.php">
+  <form method="post" action="lab6.php">
     <input type="text" name="op1" id="name" value="" />
     <input type="text" name="op2" id="name" value="" />
     <br/>
