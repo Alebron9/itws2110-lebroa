@@ -1,0 +1,54 @@
+-- Create Database
+CREATE DATABASE IF NOT EXISTS `ITWS2110-Fall2025-Quiz2`;
+USE `ITWS2110-Fall2025-Quiz2`;
+
+-- Create users table
+CREATE TABLE IF NOT EXISTS `users` (
+  `userId` INT AUTO_INCREMENT PRIMARY KEY,
+  `firstName` VARCHAR(100) NOT NULL,
+  `lastName` VARCHAR(100) NOT NULL,
+  `nickName` VARCHAR(100) UNIQUE NOT NULL,
+  `passwordHash` VARCHAR(255) NOT NULL,
+  `passwordSalt` VARCHAR(255) NOT NULL,
+  `createdAt` TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- Create projects table
+CREATE TABLE IF NOT EXISTS `projects` (
+  `projectId` INT AUTO_INCREMENT PRIMARY KEY,
+  `name` VARCHAR(255) UNIQUE NOT NULL,
+  `description` TEXT NOT NULL,
+  `createdAt` TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- Create projectMembership table
+CREATE TABLE IF NOT EXISTS `projectMembership` (
+  `membershipId` INT AUTO_INCREMENT PRIMARY KEY,
+  `projectId` INT NOT NULL,
+  `memberId` INT NOT NULL,
+  `joinedAt` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (`projectId`) REFERENCES `projects`(`projectId`) ON DELETE CASCADE,
+  FOREIGN KEY (`memberId`) REFERENCES `users`(`userId`) ON DELETE CASCADE,
+  UNIQUE KEY `unique_project_member` (`projectId`, `memberId`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- Create indexes for better query performance
+CREATE INDEX `idx_users_nickname` ON `users`(`nickName`);
+CREATE INDEX `idx_projects_name` ON `projects`(`name`);
+CREATE INDEX `idx_projectMembership_projectId` ON `projectMembership`(`projectId`);
+CREATE INDEX `idx_projectMembership_memberId` ON `projectMembership`(`memberId`);
+
+-- Create all users information
+INSERT INTO users (firstName, lastName, nickName, passwordHash, passwordSalt) VALUES
+('Alejandro', 'Lebron', 'Ale', SHA2(CONCAT('password847', 'AleLeb'), 256), 'AleLeb'),
+('Pablo', 'Semidey', 'Semi', SHA2(CONCAT('password312', 'PabSem'), 256), 'PabSem'),
+('Joaquin', 'Rodrigues', 'King', SHA2(CONCAT('password456', 'JoaRod'), 256), 'JoaRod'),
+('Stephani', 'Espada', 'Sparkle', SHA2(CONCAT('password789', 'SteEsp'), 256), 'SteEsp'),
+('Santiago', 'Padilla', 'Santi', SHA2(CONCAT('password234', 'SanPad'), 256), 'SanPad'),
+('Sebastian', 'Portillo', 'Porti', SHA2(CONCAT('password567', 'SebPor'), 256), 'SebPor'),
+('Carlos', 'Flores', 'CFlower', SHA2(CONCAT('password891', 'CarFlo'), 256), 'CarFlo'),
+('Brian', 'Cocero', 'Bribs', SHA2(CONCAT('password123', 'BriCoc'), 256), 'BriCoc'),
+('Miguel', 'Collazo', 'BigM', SHA2(CONCAT('password645', 'MigCol'), 256), 'MigCol'),
+('Jorge', 'Collazo', 'Spongy', SHA2(CONCAT('password972', 'JorCol'), 256), 'JorCol'),
+('Fransisco', 'Ramis', 'Chisco', SHA2(CONCAT('password381', 'FraRam'), 256), 'FraRam'),
+('Gerardo', 'Rios', 'River', SHA2(CONCAT('password654', 'GerRio'), 256), 'GerRio');
